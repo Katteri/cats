@@ -3,6 +3,7 @@ version: '3.8'
 services:
   docker-server-clswk: 
     image: cats:latest
+    restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
@@ -12,6 +13,7 @@ services:
       - cats-db-clswk
   cats-db-clswk: 
     image: postgres:14-alpine
+    restart: unless-stopped
     environment:
       - POSTGRES_DB=cats_db_clswk
       - POSTGRES_USER=user

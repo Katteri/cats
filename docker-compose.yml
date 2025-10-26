@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   docker-server-clswk: 
-    build: cats:latest
+    image: cats:latest
     ports:
       - "8080:8080"
     environment:

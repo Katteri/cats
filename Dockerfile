@@ -8,7 +8,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean package
 
-FROM openjdk:26-ea-jdk-slim
+FROM bellsoft/liberica-openjre-alpine:21-cds
 
 WORKDIR /app
 

@@ -8,7 +8,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 RUN mvn clean package
 
-FROM bellsoft/liberica-openjre-alpine:21-cds
+FROM bellsoft/liberica-openjre-alpine:21-cds AS deploy
 
 WORKDIR /app
 
